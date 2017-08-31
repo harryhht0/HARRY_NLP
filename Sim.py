@@ -1,3 +1,5 @@
+
+
 # -*- coding=utf-8 -*-
 import sys
 
@@ -6,7 +8,7 @@ sys.setdefaultencoding('utf-8')
 
 from math import *
 
-Dic = open('Dic.txt', 'r')
+Dic = open('Dic.txt', 'r') #导入同义词词林
 dic = []
 line = 0
 pie = 3.1415926535
@@ -19,7 +21,7 @@ for lines in Dic.xreadlines():
     pass
 Dic.close()
 
-
+#计算相似度函数
 def sim(wa, wb):
     a = ' ' + wa + ' '
     b = ' ' + wb + ' '
@@ -35,7 +37,7 @@ def sim(wa, wb):
         print'can\'t find'
         return 0.0
     print tas, tbs
-
+    #计算输出值
     def GetN():
         ts = ta1 + ta2 + ta3 + ta4
         for lines in dic:
